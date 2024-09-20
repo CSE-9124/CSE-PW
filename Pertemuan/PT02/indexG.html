@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <article>
+            <h1>Mengenal Elemen HTML5</h1>
+            <p>
+                HTML5 memperkenalkan sejumlah elemen baru yang sangat berguna,
+                termasuk <strong>&lt;audio&gt;</strong> untuk memutar audio,
+                <strong>&lt;canvas&gt;</strong> untuk menggambar grafik dinamis,
+                dan <strong>&lt;article&gt;</strong> untuk konten
+                artikel yang independen.
+            </p>
+        </article>
+        <!--bagian canvas-->
+        <canvas id="examplecanvas" width="300" height="150">
+            Browsermu tidak support HTML5 tag canvas.
+        </canvas>
+        <!--bagian audio file mp3, acc, wav, webm, ogg, flac-->
+        <audio controls>
+            <source src="/audio/audioku.aac">
+            Browsermu tidak support HTML5 tag audio.
+        </audio>
+        <script>
+            // menggambar pada elemen canvas
+            var canvas = document.getelementbyid('examplecanvas');
+            var context = canvas.getcontext('2d');
+            // menggambar persegi panjang di canvas
+            context.fillstyle = 'green';
+            context.fillrect(10, 10, 280, 130);
+            // menambahkan teks di dalam canvas
+            context.fillstyle = 'white';
+            context.font = '20px arial';
+            context.filltext('Contoh Canvas', 70, 80);
+        </script>
+    </body>
+</html>

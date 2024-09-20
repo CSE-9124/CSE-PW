@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Membuat Form</title>
+    </head>
+    <body>
+        <h1>Contoh Form di HTML</h1>
+        <!-- membuat form untuk mengumpulkan data pengguna -->
+        <form action="/submit" method="post">
+            <!-- input teks untuk nama -->
+            <label for="name">Nama:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <!-- input email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <!-- pilihan radio untuk jenis kelamin -->
+            <label for="gender">Jenis Kelamin:</label><br>
+            <input type="radio" id="male" name="gender" value="male"> Pria<br>
+            <input type="radio" id="female" name="gender" value="female"> Wanita<br><br>
+            <!-- tombol submit untuk mengirim form -->
+            <input type="submit" value="Kirim">
+        </form>
+
+        <h1>form dengan Berbagai Input Type by @A.K.Jailani</h1>
+        <form action="/submit" method="post">
+            <!-- input teks biasa untuk nama -->
+            <label for="name">Nama:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <!-- input untuk Kata Sandi (password) -->
+            <label for="password">Kata Sandi:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <!-- input untuk email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <!-- input untuk nomor telepon -->
+            <label for="tel">Nomor Telepon:</label><br>
+            <input type="tel" id="tel" name="tel"><br><br>
+            <!-- input untuk tanggal -->
+            <label for="dob">Tanggal Lahir:</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+            <!-- input untuk waktu -->
+            <label for="appt">Waktu Pertemuan:</label><br>
+            <input type="time" id="appt" name="appt"><br><br>
+            <!-- input untuk tanggal dan waktu -->
+            <label for="meeting">Tanggal dan Waktu Pertemuan:</label><br>
+            <input type="datetime-local" id="meeting" name="meeting"><br><br>
+            <!-- input untuk angka -->
+            <label for="quantity">Jumlah:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+            <!-- input untuk url -->
+            <label for="website">Website Favoritmu:</label><br>
+            <input type="url" id="website" name="website"><br><br>
+            <!-- input untuk warna -->
+            <label for="favcolor">Warna Favoritmu:</label><br>
+            <input type="color" id="favcolor" name="favcolor"><br><br>
+            <!-- input untuk file -->
+            <label for="resume">Unggah Filemu:</label><br>
+            <input type="file" id="resume" name="resume"><br><br>
+            <!-- input untuk range (slider) -->
+            <label for="volume">Volume:</label><br>
+            <input type="range" id="volume" name="volume" min="0" max="100"><br><br>
+            <!-- input untuk checkbox -->
+            <label for="subscribe">Langganan Newsletter atau Subscribe:</label>
+            <input type="checkbox" id="subscribe" name="subscribe"><br><br>
+            <!-- input untuk radio button -->
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="male" name="gender" value="male"> Pria<br>
+            <input type="radio" id="female" name="gender" value="female"> Wanita<br><br>
+            <!-- input untuk pencarian -->
+            <label for="search">Pencarian:</label><br>
+            <input type="search" id="search" name="search"><br><br>
+            <!-- input untuk bulan -->
+            <label for="bmonth">Bulan Kelahiran:</label><br>
+            <input type="month" id="bmonth" name="bmonth"><br><br>
+            <!-- input untuk minggu -->
+            <label for="week">Pekan:</label><br>
+            <input type="week" id="week" name="week"><br><br>
+            <!-- tombol submit untuk mengirim form -->
+            <input type="submit" value="Kirim">
+        </form>
+    </body>
+</html>

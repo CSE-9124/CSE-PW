@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tabel dalam HTML</title>
+    </head>
+    <body>
+        <h1>Contoh Tabel di HTML</h1>
+        <table border="1">
+            <tr> <!-- BARIS PERTAMA ADALAH HEADER TABEL -->
+                <th>Nama</th> <!-- KOLOM PERTAMA -->
+                <th>Umur</th> <!-- KOLOM KEDUA -->
+                <th>Kota</th> <!-- KOLOM KETIGA -->
+            </tr>
+            <tr> <!-- BARIS KEDUA ADALAH DATA TABEL -->
+                <td>Aco Baco</td> <!-- KOLOM PERTAMA -->
+                <td>19</td>       <!-- KOLOM KEDUA -->
+                <td>Makassar</td> <!-- KOLOM KETIGA -->
+            </tr>
+            <tr> <!-- BARIS KETIGA ADALAH DATA TABEL -->
+                <td>Becce</td>      <!-- KOLOM PERTAMA -->
+                <td>18</td>         <!-- KOLOM KEDUA -->
+                <td>Pare-pare</td>  <!-- KOLOM KETIGA -->
+            </tr>
+        </table>
+
+        <h1>Contoh Tabel Merger di HTML</h1>
+        <table border="1">
+            <tr>
+                <th rowspan="2">Hari</th> <!-- menggabung 2 baris -->
+                <th colspan="2">Jam</th> <!-- menggabung 2 kolom -->
+            </tr>
+            <tr>
+                <th>Pertama</th>
+                <th>Kedua</th>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td><center>UI/UX</center></td>
+                <td><center>PBM</center></td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td><center>Pemrograman Web</center></td>
+                <td><center>KSI</center></td>
+            </tr>
+        </table>
+    </body>
+</html>
