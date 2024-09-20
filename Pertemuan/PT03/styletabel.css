@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c; /* Warna latar belakang sesuai gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.page-title {
+    color: red;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.table-container {
+    background-color: #0d1b1e; /* Warna latar belakang container */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3); /* Shadow dengan efek cyan */
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    border-color: #00ffff; /* Warna border tabel cyan */
+}
+
+.styled-table thead tr {
+    background-color: #092327; /* Warna background header sesuai gambar */
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #00ffff; /* Warna garis bawah header cyan */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #00ffff; /* Warna garis dalam tabel cyan */
+}
+
+.styled-table tbody tr {
+    background-color: #0d1b1e; /* Warna latar belakang baris sesuai gambar */
+    color: #ffffff;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #0f262b; /* Warna latar belakang baris genap sedikit lebih terang */
+}
+
+.styled-table tbody tr:hover {
+    background-color: #184347; /* Warna latar belakang saat di-hover sesuai gambar */
+}
+
+.styled-table th[colspan="8"] {
+    background-color: #092327;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00ffff;
+}

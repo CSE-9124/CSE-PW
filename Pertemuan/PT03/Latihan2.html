@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- Latihan 2 CSS -->
+<html lang="id"> <!-- Tag pembuka elemen html yang menandakan awal dari dokumen HTML dengan atribut yang menunjukkan bahwa bahasa dokumen adalah bahasa indonesia -->
+    <head> <!-- Elemen yang berisi metadata dan elemen-elemen lain yang mendefinisikan dokumen HTML -->
+        <meta charset="UTF-8"> <!-- Elemen yang menentukan karakter encoding dokumen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Elemen yang memberikan instruksi kepada browser tentang cara mengontrol dimensi dan skala halaman -->
+        <title>Layout dengan Flexbox</title> <!-- Elemen yang menentukan judul dokumen -->
+        <style> /* Tag untuk mendefinisikan CSS secara internal */
+
+            /* Selector class yang akan diberikan style */
+            .container {
+                display: flex; /* Elemen yang memungkinkan tata letak elemen anak secara fleksibel */
+            }
+
+            .left {
+                flex: 30%; /* Elemen yang akan mengambil 30% dari lebar kontainer flex */
+                background-color: lightgrey; /* Elemen yang akan mengatur warna latar belakang menjadi abu-abu muda */
+                padding: 10px; /* Elemen yang akan memberikan jarak antara konten dengan batas elemen */
+            }
+
+            .right {
+                flex: 70%; /* Elemen yang akan mengambil 70% dari lebar kontainer flex */
+                background-color: lightblue; /* Elemen yang akan mengatur warna latar belakang menjadi biru muda */
+                padding: 10px; /* Elemen yang akan memberikan jarak antara konten dengan batas elemen */
+            }
+        </style> <!-- Tag penutup untuk mendefinisikan CSS secara internal -->
+    </head> <!-- Tag penutup untuk elemen head -->
+    <body> <!-- Elemen yang berisi konten visual yang akan ditampilkan di browser -->
+        <div class="container"> <!-- Elemen yang bertindak sebagai wadah (container) untuk elemen di dalamnya dan mengatur tata letaknya menggunakan properti display: flex -->
+        <div class="left">Kolom Kiri</div> <!-- Elemen yang akan menampilkan teks "Kolom Kiri" dengan memiliki class left yang didefinisikan sebelumnya -->
+        <div class="right">Kolom Kanan</div> <!-- Elemen yang akan menampilkan teks "Kolom Kanan" dengan memiliki class right yang didefinisikan sebelumnya -->
+        </div> <!-- Tag penutup untuk elemen div -->
+    </body> <!-- Tag penutup untuk elemen body -->
+</html> <!-- Tag penutup untuk elemen html -->

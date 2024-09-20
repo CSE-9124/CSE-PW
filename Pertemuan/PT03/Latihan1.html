@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!-- Latihan 1 CSS -->
+<html lang="id"> <!-- Tag pembuka elemen html yang menandakan awal dari dokumen HTML dengan atribut yang menunjukkan bahwa bahasa dokumen adalah bahasa indonesia -->
+    <head> <!-- Elemen yang berisi metadata dan elemen-elemen lain yang mendefinisikan dokumen HTML -->
+        <meta charset="UTF-8"> <!-- Elemen yang menentukan karakter encoding dokumen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Elemen yang memberikan instruksi kepada browser tentang cara mengontrol dimensi dan skala halaman -->
+        <title>Latihan CSS</title> <!-- Elemen yang menentukan judul dokumen -->
+        <style> /* Tag untuk mendefinisikan CSS secara internal */
+
+            /* Selector class yang akan diberikan style teks warna biru*/
+            .internal {
+                color: blue; 
+            }
+        </style> <!-- Tag penutup untuk mendefinisikan CSS secara internal -->
+        <link rel="stylesheet" href="stylelat1.css"> <!-- Tag ini menghubungkan dokumen HTML dengan file CSS eksternal -->
+    </head> <!-- Tag penutup untuk elemen head -->
+    <body> <!-- Elemen yang berisi konten visual yang akan ditampilkan di browser -->
+        <p style="color: red">Ini paragraf dengan inline CSS</p> <!-- Elemen yang menunjukkan paragraf dengan memiliki style inline yang memberi teks warna merah -->
+        <p class="internal">Ini paragraf dengan internal CSS</p> <!-- Elemen yang menunjukkan paragraf dengan memiliki class internal yang memberi teks warna biru -->
+        <p class="external">Ini paragraf dengan external CSS</p> <!-- Elemen yang menunjukkan paragraf dengan memiliki class external yang memberi teks warna hijau -->
+    </body> <!-- Tag penutup untuk elemen body -->
+</html> <!-- Tag penutup untuk elemen html -->

@@ -1,0 +1,145 @@
+<!DOCTYPE html> <!-- Latihan 3 CSS -->
+<html lang="id"> <!-- Tag pembuka elemen html yang menandakan awal dari dokumen HTML dengan atribut yang menunjukkan bahwa bahasa dokumen adalah bahasa indonesia -->
+    <head> <!-- Elemen yang berisi metadata dan elemen-elemen lain yang mendefinisikan dokumen HTML -->
+        <meta charset="UTF-8"> <!-- Elemen yang menentukan karakter encoding dokumen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Elemen yang memberikan instruksi kepada browser tentang cara mengontrol dimensi dan skala halaman -->
+        <title>Tabel pada CSS dam HTML</title> <!-- Elemen yang menentukan judul dokumen -->
+        <style> /* Tag untuk mendefinisikan CSS secara internal */
+
+            /* Selector untuk body yang akan diberikan style */
+            body {
+                font-family: Arial, sans-serif; /* Elemen yang akan Mengatur jenis huruf yang digunakan menjadi Arial (jika tidak tersedia, akan menggunakan huruf jenis sans-serif) */
+                background-color: #0c0c0c; /* Mengatur warna latar belakang halaman menjadi hitam pekat (#0c0c0c) */
+                display: flex; /* Elemen yang memungkinkan tata letak elemen anak secara flexbox */
+                justify-content: center; /* Mengatur elemen di dalam body agar berada di tengah secara horizontal */
+                align-items: center; /* Mengatur elemen di dalam body agar berada di tengah secara vertikal */
+                height: 100vh; /* Mengatur tinggi elemen body menjadi 100% dari tinggi viewport */
+                margin: 0; /* Mengatur margin elemen body menjadi 0 */
+                flex-direction: column; /* Mengatur elemen di dalam body untuk ditampilkan di tengah secara vertikal */
+            }
+
+            /* Selector untuk class-class yang akan diberikan style */
+            .page-title {
+                color: red; /* Mengatur warna teks menjadi merah */
+                text-align: center; /* Mengatur teks agar berada di tengah */
+                font-size: 1.4em; /* Mengatur ukuran teks sebesar 1.4 kali ukuran standar */
+                margin-bottom: 10px; /* Memberikan jarak 10px di bagian bawah elemen */
+                font-weight: bold; /* Mengatur teks menjadi tebal */
+            }
+
+            .table-container {
+                background-color: #0d1b1e; /* Mengatur warna latar belakang menjadi (#0d1b1e) */
+                padding: 20px; /* Memberikan jarak 20px di dalam elemen */
+                border-radius: 12px; /* Membuat sudut elemen membulat dengan radius 12px */
+                box-shadow: 0 0 40px rgba(0, 255, 255, 0.3); /* Memberikan efek bayangan dengan warna cyan dan transparansi 30%. */
+                margin-top: 10px; /* Memberikan jarak 10px di bagian atas elemen */
+            }
+
+            .styled-table {
+                width: 100%; /* Mengatur tabel agar mengambil 100% dari lebar kontainer */
+                border-collapse: collapse; /* Menggabungkan garis tepi sel yang berdekatan */
+                font-size: 0.9em; /* Mengatur ukuran teks sebesar 0.9 kali ukuran standar */
+                border-radius: 8px 8px 0 0; /* Membuat sudut elemen membulat dengan radius 8px pada sudut atas */
+                overflow: hidden; /* Mengatur agar elemen tabel tidak */
+                border-color: #00ffff; /* Mengatur warna garis tabel menjadi cyan */
+            }
+
+            /* Selector untuk elemen-elemen tabel */
+            .styled-table thead tr {
+                background-color: #092327; /* Mengatur warna latar belakang baris header menjadi #092327 */
+                color: #ffffff; /* Mengatur warna teks menjadi putih */
+                text-align: center; /* Mengatur teks agar berada di tengah */
+                font-weight: bold; /* Mengatur teks menjadi tebal */
+                border-bottom: 2px solid #00ffff; /* Mengatur garis bawah teks menjadi 2px solid cyan */
+            }
+
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px; /* Memberikan jarak 12px di bagian atas dan bawah, serta 15px di bagian kiri dan kanan */
+                text-align: center; /* Mengatur teks agar berada di tengah */
+                border: 1px solid #00ffff; /* Mengatur garis tepi elemen menjadi 1px solid cyan */
+            }
+
+            .styled-table tbody tr {
+                background-color: #0d1b1e; /* Mengatur warna latar belakang baris menjadi #0d1b1e */
+                color: #ffffff; /* Mengatur warna teks menjadi putih */
+            }
+
+            .styled-table tbody tr:nth-of-type(even) { 
+                background-color: #0f262b; /* Mengatur warna latar belakang baris genap menjadi #0f262b */
+            }
+
+            .styled-table tbody tr:hover {
+                background-color: #184347; /* Mengubah warna latar belakang baris ketika mouse mengarah ke atasnya */
+            }
+
+            .styled-table th[colspan="8"] {
+                background-color: #092327; /* Mengatur warna latar belakang elemen yang memiliki colspan 8 menjadi #092327 */
+                font-size: 1.1em; /* Mengatur ukuran teks sebesar 1.1 kali ukuran standar */
+                text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+                border-bottom: 2px solid #00ffff; /* Mengatur garis bawah teks menjadi 2px solid cyan */
+            }
+        </style> <!-- Tag penutup untuk mendefinisikan CSS secara internal -->
+    </head> <!-- Tag penutup untuk elemen head -->
+    <body> <!-- Elemen yang berisi konten visual yang akan ditampilkan di browser -->
+        <h2 class="page-title">Latihan 3 Tabel pada CSS dan HTML</h2> <!-- Elemen yang menampilkan teks "Latihan 3 Tabel pada CSS dan HTML" dengan class page-title yang didefinisikan sebelumnya -->
+        <div class="table-container"> <!-- Elemen yang bertindak sebagai wadah (container) untuk elemen di dalamnya -->
+            <table class="styled-table"> <!-- Elemen yang menampilkan tabel dengan class styled-table yang didefinisikan sebelumnya -->
+                <thead> <!-- Elemen yang berisi baris-baris header tabel -->
+                    <tr> <!-- Elemen yang menunjukkan baris pada tabel -->
+                        <th colspan="8">MAIN HEADER</th> <!-- Elemen yang menunjukkan header pada tabel dengan menggabungkan 8 kolom -->
+                    </tr> <!-- Tag penutup untuk elemen tr -->
+                    <tr>
+                        <!-- Elemen yang mendefinisikan header untuk 8 kolom (COL 1 sampai COL 8) -->
+                        <th>COL 1</th> 
+                        <th>COL 2</th>
+                        <th>COL 3</th>
+                        <th>COL 4</th>
+                        <th>COL 5</th>
+                        <th>COL 6</th>
+                        <th>COL 7</th>
+                        <th>COL 8</th>
+                    </tr>
+                </thead> <!-- Tag penutup untuk elemen thead -->
+                <tbody> <!-- Elemen yang berisi baris-baris isi tabel -->
+                    <tr>
+                        <td rowspan="2">Merged Row 1</td> <!-- Elemen yang menunjukkan isi tabel dengan menggabungkan 2 baris -->
+                        <td colspan="2">Merged Col 1</td> <!-- Elemen yang menunjukkan isi tabel dengan menggabungkan 2 kolom -->
+                        <td>Item 1</td> <!-- Elemen yang menunjukkan isi tabel -->
+                        <td>Item 2</td> <!-- Elemen yang menunjukkan isi tabel -->
+                        <td colspan="2">Merged Col 2</td> <!-- Elemen yang menunjukkan isi tabel dengan menggabungkan 2 kolom -->
+                        <td>Item 3</td> <!-- Elemen yang menunjukkan isi tabel -->
+                    </tr>
+                    <tr>
+                        <td>Item 4</td> <!-- Elemen yang menunjukkan isi tabel -->
+                        <td>Item 5</td> <!-- Elemen yang menunjukkan isi tabel -->
+                        <td colspan="2">Merged Col 3</td> <!-- Elemen yang menunjukkan isi tabel dengan menggabungkan 2 kolom -->
+                        <td>Item 6</td> <!-- Elemen yang menunjukkan isi tabel -->
+                        <td>Item 7</td> <!-- Elemen yang menunjukkan isi tabel -->
+                    </tr>
+                    <tr>
+                        <!-- Elemen yang berisi data individual di setiap kolom ("Item 8" sampai "Item 15") -->
+                        <td>Item 8</td>
+                        <td>Item 9</td>
+                        <td>Item 10</td>
+                        <td>Item 11</td>
+                        <td>Item 12</td>
+                        <td>Item 13</td>
+                        <td>Item 14</td>
+                        <td>Item 15</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Merged Col 4</td> <!-- Elemen yang menunjukkan isi tabel dengan menggabungkan 2 kolom -->
+                        <!-- Elemen yang berisi data individual di setiap kolom ("Item 16" sampai "Item 21") -->
+                        <td>Item 16</td>
+                        <td>Item 17</td>
+                        <td>Item 18</td>
+                        <td>Item 19</td>
+                        <td>Item 20</td>
+                        <td>Item 21</td>
+                    </tr>
+                </tbody> <!-- Tag penutup untuk elemen tbody -->
+            </table> <!-- Tag penutup untuk elemen table -->
+        </div> <!-- Tag penutup untuk elemen div -->
+    </body> <!-- Tag penutup untuk elemen body -->
+</html> <!-- Tag penutup untuk elemen html -->
