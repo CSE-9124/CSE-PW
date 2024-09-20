@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Case</title>
+    <style>
+        .photo-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .photo {
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            gap: 50px;
+        }
+
+        .photo:hover {
+            box-shadow: 0 0 30px pink;
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <div class="photo-container">
+        <img src="/MediaSource/Images/Nezuko.jpeg" alt="Photo 1" class="photo">
+        <img src="/MediaSource/Images/Nezuko.jpeg" alt="Photo 2" class="photo">
+        <img src="/MediaSource/Images/Nezuko.jpeg" alt="Photo 3" class="photo">
+        <img src="/MediaSource/Images/Nezuko.jpeg" alt="Photo 3" class="photo">
+    </div>
+</body>
+</html>
