@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            background-color: #2c2f33;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #23272a;
+            width: 500px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .toggle-switch {
+            margin-bottom: 20px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #23272a;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            border-radius: 34px;
+            box-shadow: 0 0 50px rgba(0, 102, 255, 0.5);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #2196f3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        #status-text {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin: 10px 0 5px 0;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            background-color: #282c2f;
+            color: white;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 2px solid #2196f3;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            position: relative;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #23272a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 0 50px rgba(0, 102, 255, 0.5);
+        }
+
+        button:hover {
+            background-color: #2196f3;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+        .gender-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .footer-text {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .warning {
+            font-size: 0.8rem;
+            color: rgba(255, 0, 0, 0.581);
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Formulir Pendaftaran by 😎CSE</h1>
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="status" />
+                <span class="slider"></span>
+            </label>
+            <p id="status-text">Status: OFF</p>
+        </div>
+        <form id="registration-form" action="TugasResult.html" method="post">
+            <label for="Name">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
+
+            <label for="Email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="Tanggal">Tanggal Lahir:</label>
+            <input type="date" id="tanggalLahir" required>
+
+            <div class="gender-container">
+                <p>Jenis Kelamin:</p>
+                <input type="radio" id="male" name="gender" value="Laki-laki">
+                <label for="male">Laki-laki</label>
+                <br>
+                <input type="radio" id="female" name="gender" value="Perempuan">
+                <label for="female">Perempuan</label>
+            </div>
+
+            <label>
+                <input type="checkbox" id="syarat" name="syarat" required> Saya
+                menyetujui syarat dan ketentuan
+            </label>
+
+            <button type="submit">
+                Daftar Sekarang
+            </button>
+        </form>
+        <p class="warning">Harap aktifkan status untuk melanjutkan pendaftaran</p>
+        <p class="footer-text">
+            Desain Formulir ini dirancang dengan fokus pada kemudahan penggunaan dan
+            estetika modern. Tombol dan elemen formulir diatur dengan warna dan
+            bentuk yang konsisten untuk menciptakan pengalaman yang menyenangkan.
+        </p>
+    </div>
+    <script>
+        function toggleSwitch() {
+            const status = document.getElementById("status");
+            const statusText = document.getElementById("status-text");
+            const daftarButton = document.querySelector("button[type='submit']");
+            const warningText = document.querySelector(".warning");
+
+            if (status.checked) {
+                statusText.textContent = "Status: ON";
+                statusText.style.color = "#4CAF50";
+                daftarButton.disabled = false;
+                warningText.style.display = "none";
+            } else {
+                statusText.textContent = "Status: OFF";
+                statusText.style.color = "#ccc";
+                daftarButton.disabled = true;
+                warningText.style.display = "block";
+            }
+        }
+
+        document.getElementById("status").addEventListener("change", toggleSwitch);
+
+        document
+            .getElementById("registration-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault(); // Mencegah pengiriman form tradisional
+
+                const status = document.getElementById("status");
+                const warningText = document.querySelector(".warning");
+
+                if (!status.checked) {
+                    warningText.style.display = "block";
+                    return;
+                }
+
+                // Mendapatkan nilai dari form
+                const nama = document.getElementById('nama').value;
+                const email = document.getElementById('email').value;
+                const tanggalLahir = document.getElementById('tanggalLahir').value;
+                const gender = document.querySelector(
+                    'input[name="gender"]:checked'
+                )?.value;
+
+                if (!gender) {
+                    alert("Anda harus memilih jenis kelamin!");
+                    return;
+                }
+
+                // Menyimpan nilai form ke localstorage
+                localStorage.setItem('nama', nama);
+                localStorage.setItem('email', email);
+                localStorage.setItem('tanggalLahir', tanggalLahir);
+                localStorage.setItem('gender', gender);
+
+                // Redirect ke halaman hasil dengan nilai dari form
+                window.location.href = "TugasResult.html?nama=" + encodeURIComponent(nama) + "&email=" + encodeURIComponent(email) + "&tanggalLahir=" + encodeURIComponent(tanggalLahir) + "&gender=" + encodeURIComponent(gender);
+            });
+    </script>
+</body>
+
+</html>

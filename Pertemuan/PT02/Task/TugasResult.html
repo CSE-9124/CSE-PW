@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Pendaftaran</title>
+    <style>
+        body {
+            background-color: #2c2f33;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #23272a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-weight: bold;
+            color: #2196f3;
+        }
+
+        #thank-you {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #23272a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 0 50px rgba(0, 102, 255, 0.5);
+        }
+
+        button:hover {
+            background-color: #2196f3;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Hasil Pendaftaran</h1>
+        <p>Selamat datang, <span id="nama-result"></span>!</p>
+        <p>Anda telah terdaftar sebagai seorang <span id="gender-result"></span>.</p>
+        <p>Alamat email Anda adalah <span id="email-result"></span>.</p>
+        <p>Anda lahir pada tanggal <span id="tanggalLahir-result"></span>.</p>
+        <p id="thank-you">Terima kasih telah mendaftar!</p>
+
+        <button onclick="window.location.href = 'TugasLogin.html';">
+            Kembali ke Formulir
+        </button>
+        <script>
+            // Mendapatkan data dari localStorage
+            const nama = localStorage.getItem("nama");
+            const email = localStorage.getItem("email");
+            const tanggalLahir = localStorage.getItem("tanggalLahir");
+            const gender = localStorage.getItem("gender");
+
+            // Menampilkan data ke halaman
+            document.getElementById("nama-result").textContent = nama || "Tidak tersedia";
+            document.getElementById("gender-result").textContent = gender || "Tidak tersedia";
+            document.getElementById("email-result").textContent = email || "Tidak tersedia";
+            document.getElementById("tanggalLahir-result").textContent = tanggalLahir || "Tidak tersedia";
+        </script>
+    </div>
+</body>
+
+</html>
