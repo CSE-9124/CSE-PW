@@ -1,0 +1,212 @@
+/* Container Styles */
+#container {
+    width: 100%;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1px solid #dee2e6;
+}
+
+.container {
+    width: 100%;
+    padding: 3rem;
+    margin: 3rem 0;
+    border: 1px solid #dee2e6;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 3rem;
+    border: 1px solid #dee2e6;
+}
+
+/* Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Typography */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.text-primary {
+    color: #0d6efd;
+}
+
+/* Buttons */
+button.success {
+    color: #fff;
+    background-color: #198754;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+button.info {
+    color: #fff;
+    background-color: #0dcaf0;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+button.warning {
+    color: #000;
+    background-color: #ffc107;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+/* Alerts */
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #f5c2c7;
+    border-radius: 0.375rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0d6efd;
+    padding: 0.5rem;
+}
+
+/* Form */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    border: none;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+    width: 80%;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+}

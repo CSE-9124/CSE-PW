@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tugas Bootstrap</title>
+        <link rel="stylesheet" href="Costume.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1>This is Container</h1>
+            <p>This is some text.</p>
+        </div>
+        <div class="container-fluid">
+            <h2>This is Container Fluid</h2>
+            <p>This is some text.</p>
+        </div>
+        <hr>
+        <div class="container">
+            <h1>Grid System</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Column span 4</h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column span 4</h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Column span 4</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Typography</h2>
+            <p class="lead">This is a lead paragraph.</p>
+            <p>This is a paragraph.</p>
+            <p class="text-muted">This is a muted text</p>
+            <p class="text-primary">This is a primary text</p>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Button</h2>
+            <button type="button" class="success">Success</button>
+            <button type="button" class="info">Info</button>
+            <button type="button" class="warning">Warning</button>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Alert</h2>
+            <div class="alert-danger">
+                This is a danger alert.
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Navbar</h2>
+            <nav class="navbar"></nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Modal</h2>
+            <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal">Open Modal</button>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Modal Title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h2>Carousel</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/MediaSource/Images/GTA_V_Logo.png" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/MediaSource/Images/Logo-Resmi-Unhas.png" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
