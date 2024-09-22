@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar Layout</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            /* no 8 side bar */
+            aside {
+                width: 130px;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #333;
+                padding-top: 20px;
+                color: white;
+            }
+
+            aside h2 {
+                text-align: center;
+            }
+
+            aside ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            aside ul li a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            aside ul li a:hover {
+                background-color: #444;
+            }
+
+            /* No. 12 */
+            .card-title {
+                text-decoration: underline;
+                /* no 11 */
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            /* No. 13 */
+            h2 {
+                text-transform: uppercase;
+            }
+
+            /* No. 14 */
+            h3 {
+                letter-spacing: 2px;
+            }
+
+            /* No. 15 */
+            .circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+
+            .card-text {
+                font-size: 14px;
+            }
+
+            .card img {
+                width: 50%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            main {
+                margin-left: 150px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- no 19 navbar responsive-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MySite</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#contoh">#contoh</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contoh">#contoh</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contoh">#contoh</a></li>
+                        <!-- no 20 dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                data-bs-toggle="dropdown">dropdown</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#cnth1">contoh dropdown 1</a></li>
+                                <li><a class="dropdown-item" href="#cnth2">contoh dropdown 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="13-16.html">13-16</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- no 8 side bar -->
+        <aside>
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h1>soal 9 dan 10</h1>
+            <!-- no 9 dan 10 -->
+            <input type="text" placeholder="Your name" required>
+            <button type="submit">Submit</button>
+            <h3>soal 1</h3>
+            <a href="https://sikola-v2.unhas.ac.id/" target="_blank">sikola-v2</a>
+            <br>
+            <br>
+            <h3>soal 2</h3>
+            <ul>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+            </ul>
+            <br>
+            <br>
+            <h3>soal 3</h3>
+            <article>
+                <h2>Judul Artikel</h2>
+                <p>Ini adalah paragraf pertama artikel.</p>
+                <p>Ini adalah paragraf kedua artikel.</p>
+            </article>
+            <br>
+            <br>
+            <h3>soal no 4 contoh section</h3>
+            <section>
+                <h2>Bagian 1</h2>
+                <p>Ini adalah paragraf dalam bagian pertama.</p>
+            </section>
+            <section>
+                <h2>Bagian 2</h2>
+                <p>Ini adalah paragraf dalam bagian kedua.</p>
+            </section>
+            <hr>
+            <!-- Soal nomor 5 -->
+            <h1>Soal 5</h1>
+            <footer>
+                <p>&copy; 2024 Kelompok 7. Hak Cipta Dilindungi.</p>
+            </footer>
+
+            <!-- Soal nomor 6 -->
+            <h1>Soal 6</h1>
+            <audio controls>
+                <source src="contoh-audio.mp3" type="audio/mpeg">
+            </audio>
+
+            <!-- Soal nomor 7 -->
+            <h1>Soal 7</h1>
+            <a href="https://google.com" target="_blank">Link ke halaman baru</a>
+
+            <!-- Soal nomor 5 -->
+            <h1>Soal 8</h1>
+            <aside>
+                <ul>
+                    <li><a href="#">Link Sidebar 1</a></li>
+                    <li><a href="#">Link Sidebar 2</a></li>
+                    <li><a href="#">Link Sidebar 3</a></li>
+                </ul>
+            </aside>
+            <!-- No. 18 -->
+            <div class="container mt-5">
+                <div class="row">
+                    <!-- kolom 1 -->
+                    <div class="col">
+                        <!-- No. 17 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SIKOLA v2</h5>
+                                <p class="card-text">Sistem Kelola Pembelajaran v2 Universitas Hasanuddin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- kolom 2 -->
+                    <div class="col">
+                        <!-- No. 17 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Neosia</h5>
+                                <p class="card-text">Sistem Informasi Manajemen Akademik Universitas Hasanuddin.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- kolom 3 -->
+                    <div class="col">
+                        <!-- No. 17 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">SIPAKAMASE</h5>
+                                <p class="card-text">Sistem Pengakuan Kompetensi Akademik Mahasiswa Secara Elektronik
+                                    Universitas Hasanuddin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>Soal 13</h1>
+                <h2>kelompok 7</h2><br>
+                <h1>Soal 14</h1>
+                <h3>kelompok 7</h3><br>
+                <h1>Soal 15</h1>
+                <div class="circle" style="background-color: blue;"></div><br>
+                <!-- No. 16 -->
+                <h1>Soal 16</h1>
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
