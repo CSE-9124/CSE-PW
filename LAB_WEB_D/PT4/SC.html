@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Case</title>
+</head>
+<body>
+    <!-- Nomor 1 -->
+    <script>
+        let kiyowo = ["Abe", "Ritzuki", "Cipung", "Kamari", "Issa"]
+
+        kiyowo.push("Cipung");
+        kiyowo[2] = "Limbad";
+
+        console.log(kiyowo);
+    </script>
+    <!-- Nomor 2 -->
+    <script>
+        document.write("<p>Siapa namamu?<p>");
+        let nama = prompt("Masukkan nama Anda: ");
+        document.write("<p>Siapa namamu? " + nama + "</p>");
+        document.write("<p>Halo, " + nama + ". Senang berkenalan denganmu! </p>");
+        // document.write("<p>Karena sudah kenal, sekarang aku sayang sama " + nama + "</p>");
+    </script>
+    <!-- Nomor 3 -->
+    <script>
+        let tersangka = prompt("Masukkan nama tersangka: ");
+
+        let namaAwal = tersangka.charAt(0).toLowerCase();
+        let namaAkhir = tersangka.charAt(tersangka.length - 1).toLowerCase();
+
+        if ((namaAwal === 'j' || namaAwal === 's') || (namaAkhir === 't' || namaAkhir === 'h')) {
+            document.write("<p>YA</p>");
+        } else {
+            document.write("<p>TIDAK</p>");
+        }
+    </script>
+</body>
+</html>

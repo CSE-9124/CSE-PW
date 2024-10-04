@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal JavaScript -->
+    <script>
+        function showMessage() {
+            alert("Ini adalah internal JavaScript");
+        }
+    </script>
+</head>
+
+<body>
+    <center><h1>Java Script as Brain (PT04)</h1></center>
+    <button onclick="showMessage()">Klik saya</button>
+    <br>
+
+    <!-- Print out JavaScript -->
+    <script>
+        document.write("<h2>Print out JavaScript</h2>");
+        let nama = prompt("Masukkan nama Anda: ");
+        document.write("<p>Hai " + nama + " <p>");
+        console.log("Hai " + nama);
+    </script>
+
+    <!-- Variabel JavaScript -->
+    <script>
+        // var
+        var hewan = "kucing";
+        function panggilHewan() {
+            // var hewan = "kelinci"; // Error
+            console.log(hewan);
+        }
+        panggilHewan();
+
+        // let
+            // console.log(mahasiswa);
+        let mahasiswa = "Cholyn";
+        function panggilMahasiswa() {
+            let mahasiswa2 = "Rizky";
+            console.log(mahasiswa);
+        }
+
+        mahasiswa = "Rizky";
+        panggilMahasiswa();
+
+        // const
+        const pi = 3.14;
+            // pi = 3.15; // Error
+        console.log(pi);
+    </script>
+
+    <!-- Array JavaScript -->
+    <script>
+        // Membuat array
+        let cars = ["Toyota", "Honda", "Suzuki"];
+        console.log(cars);
+
+        // Mengakses elemen array
+        let myCar = cars[0]; // Output: Toyota
+        console.log(myCar);
+
+        // Mengubah elemen array
+        cars[0] = "Daihatsu";
+        console.log(cars);
+        
+        cars[cars.indexOf("Suzuki")] = "Mazda";
+        console.log(cars);
+
+        // Mengakses elemen pertama
+        console.log(cars[0][0]);
+
+        // Mengakses elemen terakhir
+        let hasil = cars[0].length - 1;
+        console.log(cars[0][hasil]);
+
+        // Menambah elemen array
+        cars.push("Mitsubishi"); // Menambahkan elemen di akhir array
+        console.log(cars);
+        cars.pop(); // Menghapus elemen di akhir array
+        console.log(cars);
+        cars.unshift("BMW"); // Menambahkan elemen di awal array
+        console.log(cars);
+
+        // Mengetahui panjang array
+        let length = cars.length; // Output: 4
+    </script>
+
+    <script>
+        let player = {
+            nama: "Kylian Mbappe",
+            posisi: "Penyerang",
+            negara: "Perancis",
+            statistik: {
+                gol: 36,
+                asist: 20,
+            },
+            club: ["Real Madrid", "PSG", "AS Monaco"]
+        };
+
+        console.log(player.nama); // Output: "Kylian Mbappe"
+        console.log(player["posisi"]); // Output: "Penyerang
+        console.log(player.statistik.gol); // Output: 36
+        console.log(player.club[0]); // Output: "Real Madrid"
+
+        player.umur = 24; // Menambahkan properti umur
+        player.posisi = "Sayap Kiri"; // Mengubah nilai properti posisi
+        delete player.pekerjaan; // Menghapus properti club
+
+        for (let i in player) {
+            console.log(i + ": " + player[i]);
+        }
+    </script>
+
+    <script>
+        // switch case
+        let number = 2;
+        switch (number) {
+            case 1:
+                console.log("Satu");
+                break;
+            case 2:
+                console.log("Dua");
+                break;
+            case 3:
+                console.log("Tiga");
+                break;
+            default:
+                console.log("Bukan angka yang dicari");
+        }
+
+        // for
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // while
+        let i = 0;
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+
+        // do while
+        let j = 0;
+        do {
+            console.log(j);
+            j++;
+        } while (j < 0);
+
+        // for of
+        let animals = ["kucing", "kelinci", "sapi", "kuda"];
+        for (let animal of animals) {
+            console.log(animal);
+        }
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+    <button onclick="greet()">Klik saya</button>
+    <br>
+    <button onclick="nyapa()">Klik utk nyapa</button>
+    <br>
+    <button onclick="hormat()">Klik utk hormat</button>
+    <br>
+    <button onclick="salam()">Klik utk salam</button>
+    <br>
+    <button onclick="nyapaTeman('Ahmad Iffat')">Klik utk nyapa teman</button>
+    <br>
+    <button onclick="sapa()">Klik utk sapa</button>
+</body>
+
+</html>
