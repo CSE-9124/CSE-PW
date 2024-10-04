@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Java Script (PT06)</h1>
+    <h2>JavaScript Output</h2>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+    <h2>JavaScript Syntax</h2>
+    <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+    <ul>
+        <li>JavaScript is case-sensitive</li>
+        <li>JavaScript statements are separated by semicolon</li>
+        <li>JavaScript blocks are enclosed in curly brackets</li>
+        <li>JavaScript is written in HTML</li>
+    </ul>
+
+    <h2>JavaScript Variables</h2>
+    <p>JavaScript variables are containers for storing data values. <br>JavaScript variables are declared with the var keyword:</p>
+    <pre>
+        var x;
+        x = 5;
+        var y = 6;
+        var z = x + y;
+
+        // Menggunakan var (tidak disarankan untuk kode modern)
+        var nama = "Ahmad Iffat";
+        var umur = 21;
+
+        // Menggunakan let (disarankan untuk kode modern)
+        let kota = "Makassar";
+        let isStudent = true;
+
+        // Menggunakan const (untuk nilai yang tidak akan berubah)
+        const tahunLahir = 2000;
+        const PI = 3.14;
+    </pre>
+
+    <h2>JavaScript Data Types</h2>
+    <p>JavaScript variables can hold many data types: numbers, strings, objects and more.<>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+    <pre>
+        var x;           // Now x is undefined
+        x = 5;           // Now x is a Number
+        x = "John";      // Now x is a String
+    </pre>
+
+    <h2>JavaScript Operators</h2>
+    <p>JavaScript uses arithmetic operators to compute values (just like algebra).</p>
+    <p>JavaScript uses an assignment operator to assign values to variables.</p>
+    <p>JavaScript uses comparison operators to compare values.</p>
+    <p>JavaScript uses logical operators to determine the logic between variables or values.</p>
+    <pre>
+        // Arithmetic operators
+        var x = 5;
+        var y = 2;
+        var z = x + y;   // Addition
+        var z = x - y;   // Subtraction
+        var z = x * y;   // Multiplication
+        var z = x / y;   // Division
+        var z = x % y;   // Modulus
+        var z = x ** y;  // Exponentiation
+
+        // Assignment operators
+        var z = x++;     // Increment
+        var z = x--;     // Decrement
+        var z = x += y;  // Assignment
+
+        // Comparison operators
+        var z = x == y;  // Equal to
+        var z = x === y; // Identical
+        var z = x != y;  // Not equal
+        var z = x !== y; // Not identical
+        var z = x > y;   // Greater than
+        var z = x < y;   // Less than
+        var z = x >= y;  // Greater than or equal to
+        var z = x <= y;  // Less than or equal to
+        
+        // Logical operators
+        var z = x && y;  // Logical and
+        var z = x || y;  // Logical or
+        var z = ! x;     // Logical not
+    </pre>
+    <pre>
+        // Contoh operator aritmatika
+        let x = 10;
+        let y = 5;
+        let sum = x + y; // Penjumlahan
+        let diff = x - y; // Pengurangan
+
+        // Contoh operator perbandingan
+        let isEqual = (x == y); // false, karena x tidak sama dengan y
+
+        // Contoh operator logika
+        let isAdult = (age >= 18) && (age < 60); // true, jika age lebih dari 18 dan kurang dari 60
+    </pre>
+
+    <h2>JavaScript Condition</h2>
+    <p>Conditional statements are used to perform different actions based on different conditions.</p>
+    <ul>
+        <li>Use if to specify a block of code to be executed, if a specified condition is true.</li>
+        <li>Use else to specify a block of code to be executed, if the same condition is false.</l>
+        <li>Use else if to specify a new condition to test, if the first condition is false.</li>
+    </ul>
+    <pre>
+        let score = 85;
+        if (score >= 90) {
+            console.log("Grade A");
+        } else if (score >= 75) {
+            console.log("Grade B");
+        } else {
+            console.log("Grade C");
+        }
+    </pre>
+
+    <h2>JavaScript Loop</h2>
+    <p>Loops can execute a block of code a number of times.</p> 
+    <p>Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+    <ul>
+        <li>for - loops through a block of code a number of times</li>
+        <li>for/in - loops through the properties of an object</li>
+        <li>for/of - loops through the values of an iterable object</li>
+        <li>while - loops through a block of code while a specified condition is true</li>
+        <li>do/while - also loops through a block of code while a specified condition is true</li>
+    </ul>
+    <pre>
+        // Perulangan while
+        let i = 0;
+        while (i < 5) {
+            console.log("i is: " + i);
+            i++;
+        }
+
+        // Perulangan for
+        for (let i = 0; i < 5; i++) {
+            console.log("i is: " + i);
+        }
+    </pre>
+
+    <h2>JavaScript Array</h2>
+    <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+    <p>An array is a special variable, which can hold more than one value at a time.</p>
+    <pre>
+        // Membuat array
+        let cars = ["Toyota", "Honda", "Suzuki"];
+
+        // Mengakses elemen array
+        let myCar = cars[0]; // Output: Toyota
+
+        // Mengubah elemen array
+        cars[0] = "Daihatsu";
+
+        // Menambah elemen array
+        cars.push("Mitsubishi"); // Menambahkan elemen di akhir array
+
+        // Mengetahui panjang array
+        let length = cars.length; // Output: 4
+    </pre>
+
+    <h2>JavaScript Functions</h2>
+    <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+    <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+    <pre>
+        function myFunction(p1, p2) {
+            return p1 * p2;   // The function returns the product of p1 and p2
+        }
+
+        // Contoh
+        fuction salam(nama) {
+            return "Halo, " + nama + "!";
+        }
+
+        // Memanggil fungsi
+        let message = salam("Ahmad Iffat");
+
+        // Menampilkan pesan
+        console.log(message);
+    </pre>
+    <pre>
+        // Function declaration
+        function greet() {
+            console.log("Hello!");
+        }
+
+        // Function expression
+        let greet = function() {
+            console.log("Hello!");
+        }
+
+        // Arrow function
+        let greet = () => {
+            console.log("Hello!");
+        }
+
+            greet(); // Output: Hello!
+
+        // Arrow function (shorter)
+        let greet = name => console.log("Hello! " + name);
+
+            greet("Ahmad Iffat"); // Output: Hello! Ahmad Iffat
+
+        // Return Value Function
+        function sum(a, b) {
+            return a + b;
+        }
+
+            let result = sum(5, 3);
+            console.log(result); // Output: 8
+        
+        // Function with default parameter
+        function greet(name = "Stranger") {
+            console.log("Hello! " + name);
+        }
+
+            greet(); // Output: Hello! Stranger
+            greet("Ahmad Iffat"); // Output: Hello! Ahmad Iffat
+        
+        // Function with rest parameter
+        function sum(...numbers) {
+            let result = 0;
+            for (let number of numbers) {
+                result += number;
+            }
+            return result;
+        }
+
+            let result = sum(1, 2, 3, 4, 5);
+            console.log(result); // Output: 15
+
+        // Anonymous function
+        let greet = function(name) {
+            console.log("Hello, " + name + "!");
+        }
+
+            greet(); // Output: Hello!
+    </pre>
+</body>
+
+</html>

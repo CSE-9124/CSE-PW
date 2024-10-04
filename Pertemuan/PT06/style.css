@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'SignPainter HouseScript';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SignPainter HouseScript'), url('/MediaSource/Font/SignPainter\ HouseScript\ Regular.ttf'), format('truetype');
+}
+
+@font-face {
+    font-family: 'Pricedown';
+    font-style: normal;
+    font-weight: normal;
+    src: local('pricedown'), url('/MediaSource/Font/pricedown\ bl.otf'), format('opentype');
+}
+
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+p {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1 {
+    font-family: 'Pricedown';
+    color: white;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+}
+
+h1:hover {
+    color: #c7a33e;
+}
+
+h2 {
+    font-family: 'SignPainter HouseScript';
+    color: white;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 37rem;
+}
