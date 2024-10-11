@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Redemption';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Redemption'), url('/MediaSource/Font/redemption-2.otf'), format('opentype');
+}
+
+@font-face {
+    font-family: 'kirsty';
+    font-style: normal;
+    font-weight: normal;
+    src: local('kirsty'), url('/MediaSource/Font/kirsty\ rg.otf'), format('opentype');
+}
+
+@font-face {
+    font-family: 'chinese rocks';
+    font-style: normal;
+    font-weight: normal;
+    src: local('chinese rocks'), url('/MediaSource/Font/chinese\ rocks\ rg.ttf'), format('truetype');
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.914);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Redemption';
+    font-size: 2.5rem;
+    color : white;
+    text-align: center;
+    padding: 20px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 2px #dd1111;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.container-profil {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border : 1px solid #dd1111;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #dd1111;
+    margin-bottom: 20px;
+}
+
+.container-profil h2 {
+    font-family: 'chinese rocks';
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 1px #dd1111;
+}
+
+.container-profil p {
+    font-family: 'Kirsty';
+    color: white;
+    margin-bottom : 0;
+}
+
+.container-profil .code {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #dd1111;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 1px 1px 1px #dd1111;
+    box-shadow: 0 0 10px #dd1111;
+}
+
+.container-manipulation {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border : 1px solid #dd1111;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #dd1111;
+    margin-bottom: 20px;
+}
+
+.container-manipulation h2 {
+    font-family: 'chinese rocks';
+    font-size: 2.4rem;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 1px #dd1111;
+}
+
+.container-manipulation p {
+    font-family: 'Kirsty';
+    color: white;
+    margin-bottom : 0;
+}
+
+.container-manipulation input {
+    font-family: 'Kirsty';
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #dd1111;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.container-manipulation input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px #dd1111;
+}
+
+.container-manipulation button {
+    font-family: 'Kirsty';
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #dd1111;
+    background-color: #dd1111;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container-manipulation button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #dd1111;
+    box-shadow: 0 0 10px #dd1111;
+    transition: 0.5s;
+}

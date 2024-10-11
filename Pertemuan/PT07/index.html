@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aplikasi Penggunaan Object</h1>
+        <div class="container-profil">
+            <h2>Profil Pengguna</h2>
+            <p>Berikut adalah profil pengguna yang dapat Anda manipulasi</p>
+            <div class="code">
+                <pre id="profileData">
+        {
+            "firstName" : "Ahmad",
+            "lastName" : "Iffat",
+            "age" : 21,
+            "hobbies" : [
+                "Reading",
+                "Football",
+                "Swimming",
+                "Cycling",
+                "Memancing"
+            ],
+            "job" : "Mahasiswa",
+        }
+            </pre>
+            </div>
+        </div>
+        <div class="container-manipulation">
+            <h2>Manipulasi Data Profil</h2>
+            <p>Tambahkan Pekerjaan:</p>
+            <form>
+                <input type="text" id="job" placeholder="Masukkan ekerjaan">
+                <button type="button" onclick="tambahPekerjaan()">Tambahkan Pekerjaan</button>
+            </form>
+            <form>
+                <button type="button" onclick="hapusUsia()">Hapus Usia</button>
+            </form>
+
+            <p>Tambahkan Hobi:</p>
+            <form>
+                <input type="text" id="hobi" placeholder="Masukkan Hobi">
+                <button type="button" onclick="tambahHobi('akhir')">TAMBAHKAN Di AKHIR</button>
+                <button type="button" onclick="tambahHobi('awal')">TAMBAHKAN Di AWAL</button>
+                <button type="button" onclick="tambahHobi('tengah')">TAMBAHKAN DI TENGAH</button>
+            </form>
+
+            <p>Hapus Hobi Tertentu:</p>
+            <form>
+                <input type="text" id="Hobihapus" placeholder="Masukkan Hobi">
+                <button type="button" onclick="hapusHobi()">Hapus Hobi</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
