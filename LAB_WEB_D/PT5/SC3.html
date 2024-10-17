@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Case 3</title>
+</head>
+<body>
+    <h1>Pilih Warna Latar Belakang</h1>
+        <input type="color" id="favcolor" name="favcolor">
+        <button id="ubahWarnaBtn">Terapkan Warna</button>
+
+    <script>
+        let ubahWarna = document.getElementById('ubahWarnaBtn');
+        ubahWarna.addEventListener('click', function() {
+            let warna = document.getElementById('favcolor').value;
+            document.body.style.backgroundColor = warna;
+        });
+    </script>
+</body>
+</html>

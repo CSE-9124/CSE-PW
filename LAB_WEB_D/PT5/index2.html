@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menipulasi Elemen</title>
+</head>
+<body>
+    <div id="article">
+        <h1 id="judulArtikel" class="judul">Judul Lama</h1>
+        <p class="konten">Ini adalah konten artikel.</p>
+        <img class="gambar" src="/MediaSource/Images/Arthur.png" alt="Gambar artikel" width="150" height="150">
+        <ul>
+            <li class="poin">Poin pertama</li>
+            <li class="poin">Poin kedua</li>
+        </ul>
+        <button id="ubahElemenBtn">Ubah Elemen</button>
+    </div>
+
+    <script>
+        let manipulation = document.getElementById('ubahElemenBtn');
+        manipulation.addEventListener('click', function() {
+            let judul = document.getElementById('judulArtikel');
+            judul.innerHTML = 'Judul Baru';
+
+            let paragraf = document.querySelector('.konten');
+            paragraf.innerHTML = 'Ini adalah konten yang telah diubah.';
+
+            let list = document.querySelectorAll('.poin');
+            list[0].innerHTML = 'Poin pertama telah diubah';
+
+            let gambar = document.querySelector('.gambar');
+            gambar.src = '/MediaSource/Images/michael_trevor_franklin.png';
+            gambar.alt = 'Gambar artikel baru';
+            gambar.width = 300;
+            // gambar.setAttribute('src', '/MediaSource/Images/michael_trevor_franklin.png');
+            // gambar.setAttribute('alt', 'Gambar artikel baru');
+
+            let paragrafWarna = document.querySelector('.konten');
+            paragrafWarna.style.color = 'red';
+            paragrafWarna.style.fontWeight = 'bold';
+
+            let body = document.querySelector('body')[0];
+            body.style.backgroundColor = "black";
+        });
+
+        manipulation.addEventListener('click', function() {
+            let daftarPoin = document.querySelector('#daftarPoin');
+            // let poinPertama = document.('li');
+        });
+    </script>
+</body>
+</html>

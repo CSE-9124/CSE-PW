@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Case 2</title>
+</head>
+<body>
+    <h1>Daftar Belanjaan</h1>
+    <from>
+        <input type="text" id="item" name="item">
+        <button id="tambahBtn">Tambah Item</button>
+        <ul id="daftarBelanjaan">
+        </ul>
+    </from>
+
+    <script>
+        let tambah = document.getElementById('tambahBtn');
+        tambah.addEventListener('click', function() {
+            let item = document.getElementById('item').value;
+            let daftarBelanjaan = document.getElementById('daftarBelanjaan');
+                let li = document.createElement('li');
+                li.textContent = item;
+                daftarBelanjaan.appendChild(li);
+        });
+    </script>
+</body>
+</html>

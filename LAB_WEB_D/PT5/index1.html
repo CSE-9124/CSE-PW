@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memilih Elemen</title>
+</head>
+
+<body>
+    <p id="myId">Id Praktikum</p>
+    <p class="myClass">Kelas Pemrograman Web D</p>
+    <p>Kelas Pemrograman Web D</p>
+
+    <script>
+        let myID = document.getElementById('myId');
+        console.log(myID); // <p id="myId">Id Praktikum</p>
+
+        let myClass = document.getElementsByClassName('myClass');
+        console.log(myClass); // HTMLCollection(1) [p.myClass]
+
+        let p = document.getElementsByTagName('p');
+        console.log(p); // HTMLCollection(3) [p#myId, p.myClass, p]
+
+        let i = document.getElementsByTagName('p')[0];
+        console.log(i); // <p id="myId">Id Praktikum</p>
+    </script>
+</body>
+
+</html>

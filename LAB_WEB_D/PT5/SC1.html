@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Case</title>
+</head>
+<body>
+    <h1>Nama: John Doa</h1>
+    <p>status Kehadiran: Hadir</p>
+    <button id="ubahElemenBtn">Ubah Status</button>
+
+    <script>
+        let manipulation = document.getElementById('ubahElemenBtn');
+        manipulation.addEventListener('click', function() {
+            let status = document.querySelector('p');
+            status.innerHTML = 'status Kehadiran: Tidak Hadir';
+        });
+    </script>
+</body>
+</html>
