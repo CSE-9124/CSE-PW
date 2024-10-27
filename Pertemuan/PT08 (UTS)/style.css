@@ -1,0 +1,286 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+body {
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Navbar */
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-brand img{
+    margin-right: 10px;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.nav-item ion-icon {
+    top: 20px;
+    margin-right: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    font-weight: bolder;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.4s ease;
+}
+
+.menu-list a:hover {
+    color: #007bff;
+}
+
+.menu-list a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #007bff;
+    transition: width 0.4s ease;
+}
+
+.menu-list a:hover::after {
+    width: 100%;
+}
+
+.text-jadwal {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 5px 3px 10px black;
+    /* Adjust the width and color as needed */
+}
+
+
+/* Tombol edit, hapus, dan simpan */
+.btn-hapus {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-simpan {
+    background-color: #007bff;
+    color: white;
+}
+
+.cardShow {
+    min-height: 280px;
+}
+
+.cardEdit {
+    min-height: 280px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardEdit:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    background: linear-gradient(45deg, #032447, #88cde0);
+    color: #fff;
+}
+
+.card-header h5 {
+    font-weight: bold;
+    color: white;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1.25rem;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-tambah {
+    font-weight: bold;
+}
+
+.btn-tambah {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+}
+
+/* Hover effects */
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Dynamic card colors */
+.card-color-1 {
+    background-color: #ffdddd;
+}
+
+.card-color-2 {
+    background-color: #ddffdd;
+}
+
+.card-color-3 {
+    background-color: #ddddff;
+}
+
+.card-color-4 {
+    background-color: #ffddff;
+}
+
+.card-color-5 {
+    background-color: #ffffdd;
+}
+
+/* Warna teks yang kontras di dalam card */
+.card-header,
+.card-body .list-group-item {
+    color: #333;
+    /* Warna teks yang cukup gelap agar kontras dengan card */
+}
+
+.cardEdit .list-group-item {
+    cursor: pointer;
+}
+
+/* CSS untuk menyembunyikan halaman */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+

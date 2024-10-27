@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeptMath Room's Scheduler</title>
+    <link rel="icon" href="/Images/Logo-Resmi-Unhas.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand poppins-light" href="#"><img src="Images/Logo-Resmi-Unhas.png" height="50"> DeptMath Room's Scheduler</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ps-5 menu-list">
+                    <li class="nav-item">
+                        <a class="nav-link" id="lihatJadwalBtn" data-bs-slide="carousel"><ion-icon name="calendar-outline"></ion-icon> Lihat Jadwal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="editTambahJadwalBtn"><ion-icon name="create-outline"></ion-icon> Edit/Tambah Jadwal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tambahRuanganBtn"><ion-icon name="duplicate-outline"></ion-icon> Tambah Ruangan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman Lihat Jadwal -->
+    <div id="lihatJadwalPage" class="page active">
+        <section id="carouselJadwal" class="carousel slide m-5" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner" id="carousel-inner">
+                <!-- Carousel items akan diisi oleh JavaScript -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselJadwal" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselJadwal" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+    </div>
+
+    <!-- Halaman Edit/Tambah Jadwal -->
+    <div id="editTambahJadwalPage" class="page">
+        <section id="editTambahJadwal" class="m-5">
+            <div class="container">
+                <h2 class="text-center mb-4 poppins-semibold text-jadwal" style="color: white;">Edit/Tambah Jadwal</h2>
+                <div class="row" id="ruangan-container">
+                    <!-- Ruangan akan dimuat di sini -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Halaman Tambah Ruangan -->
+    <div id="tambahRuanganPage" class="page">
+        <section id="tambahRuangan" class="m-5">
+            <div class="container">
+                <h2 class="text-center mb-5 poppins-semibold text-jadwal " style="color: white;">Tambah Ruangan</h2>
+                <form id="tambahRuanganForm">
+                    <div class="form-group">
+                        <label class="cholyn" for="namaRuanganBaru" style="color: white; padding-left: 10px; margin: 6px;">Nama Ruangan</label>
+                        <input type="text" class="form-control" id="namaRuanganBaru" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Tambah Ruangan</button>
+                </form>
+
+                <h3 class="mt-5 mb-3 text-center poppins-extralight" style="color: white; font-size: 2rem;">Daftar Ruangan</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Ruangan</th>
+                            <th>Jumlah Jadwal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarRuanganBody">
+                        <!-- Daftar ruangan akan ditambahkan di sini oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Modal untuk edit mata kuliah -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Mata Kuliah</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="form-group">
+                            <label for="mataKuliahName">Nama Mata Kuliah</label>
+                            <input type="text" class="form-control" id="mataKuliahName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mataKuliahMulai">Mulai</label>
+                            <input type="text" class="form-control" id="mataKuliahMulai" placeholder="08:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mataKuliahBerakhir">Berakhir</label>
+                            <input type="text" class="form-control" id="mataKuliahBerakhir" placeholder="10:00"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hariMataKuliah">Hari</label>
+                            <select class="form-control" id="hariMataKuliah">
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jumat">Jumat</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="ruanganIndex">
+                        <input type="hidden" id="mataKuliahIndex">
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button type="button" class="btn-hapus btn-danger" id="hapusJadwal">Hapus Jadwal</button>
+                    <button type="submit" class="btn-simpan btn-primary" id="saveChanges">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk tambah mata kuliah -->
+    <div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="tambahModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tambahModalLabel">Tambah Mata Kuliah</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="tambahForm">
+                        <div class="form-group">
+                            <label for="tambahNama">Nama Mata Kuliah</label>
+                            <input type="text" class="form-control" id="tambahNama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tambahMulai">Mulai</label>
+                            <input type="text" class="form-control" id="tambahMulai" placeholder="08:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tambahBerakhir">Berakhir</label>
+                            <input type="text" class="form-control" id="tambahBerakhir" placeholder="10:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tambahHari">Hari</label>
+                            <select class="form-control" id="tambahHari">
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jumat">Jumat</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="tambahRuanganIndex">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn-tambah btn-success" id="tambahJadwalBtn">Tambah Jadwal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Ruangan -->
+    <div class="modal fade" id="editRuanganModal" tabindex="-1" aria-labelledby="editRuanganModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editRuanganModalLabel">Edit Ruangan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editRuanganForm">
+                        <input type="hidden" id="editRuanganIndex">
+                        <div class="mb-3">
+                            <label for="editNamaRuangan" class="form-label">Nama Ruangan</label>
+                            <input type="text" class="form-control" id="editNamaRuangan" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="saveEditRuangan">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">DeptMath Room's Scheduler © 2024. All Rights Reserved.</span>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
